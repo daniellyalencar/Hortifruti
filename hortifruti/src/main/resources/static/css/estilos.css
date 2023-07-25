@@ -1,0 +1,101 @@
+.carouselExampleCaptions {
+	max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+}
+
+.carousel-item img {
+    height: 300px; /* Defina a altura desejada para as imagens */
+/*    object-fit: cover;  Ou object-fit: contain; */
+  }
+
+footer {
+    background-color: #90EE90;
+    color: white;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 6%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 33%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+    position: relative;
+}
+
+.footer-col a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col .medias-socias {
+    margin-top: 30px;
+}
+
+.footer-col .medias-socias a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+
+.footer-col .medias-socias a i {
+    font-size: 20px;
+}
+
+.footer-col .medias-socias a:hover {
+    color: #415aca;
+    background-color: white;
+}
+
+.footer-col .form-sub input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    background-color: #415aca;
+}
+
+.footer-col .form-sub button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px; 
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #415aca;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;        
+}
