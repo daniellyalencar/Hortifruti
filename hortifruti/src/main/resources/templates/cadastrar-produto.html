@@ -86,13 +86,13 @@
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputPrecoCusto" class="form-label">Preço custo (R$)</label> <input type="number"
-							class="form-control" id="precoCusto" name="precoCusto" required placeholder="999.999,99">
+						<label for="inputPrecoCusto" class="form-label">Preço custo (R$)</label> <input type="text"
+							class="form-control" id="precoCusto" name="precoCusto" oninput="atualizarCampoMoeda(this)" required placeholder="999.999,99">
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputPrecoVenda" class="form-label">Preço venda (R$)</label> <input type="number"
-							class="form-control" id="precoVenda" name="precoVenda" required placeholder="999.999,99">
+						<label for="inputPrecoVenda" class="form-label">Preço venda (R$)</label> <input type="text"
+							class="form-control" id="precoVenda" name="precoVenda" oninput="atualizarCampoMoeda(this)" required placeholder="999.999,99">
 					</div>
 
 					<div class="col-md-2">
@@ -101,14 +101,14 @@
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputValorEstoqueMin" class="form-label">Valor mín estoque</label> <input
-							type="number" class="form-control" id="valorEstoqueMin" name="valorEstoqueMin" required
+						<label for="inputQtdEstoqueMin" class="form-label">Qtd mín estoque</label> <input
+							type="number" class="form-control" id="qtdEstoqueMin" name="qtdEstoqueMin" required
 							placeholder="999.999,99">
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputValorEstoqueMax" class="form-label">Valor máx estoque</label> <input
-							type="number" class="form-control" id="valorEstoqueMax" name="valorEstoqueMax" required
+						<label for="inputQtdEstoqueMax" class="form-label">Qtd máx estoque</label> <input
+							type="number" class="form-control" id="qtdEstoqueMax" name="qtdEstoqueMax" required
 							placeholder="999.999,99">
 					</div>
 					
@@ -134,6 +134,8 @@
 	<script>
 		document.getElementById('produtoLink').classList.add('active');
 	</script>
+	
+	<script src="js/formatarMoeda.js"></script>
 	
 </body>
 

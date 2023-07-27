@@ -64,10 +64,6 @@ public class ProdutoController {
 		pr.deleteById(idProduto);
 		return "redirect:/listar-produtos";
 	}
-	
-	@RequestMapping(value = "cadastrar-fornecedor", method = RequestMethod.GET)
-	public String cadastrarFornecedor() {
-		return "cadastrar-fornecedor";
-	}
+
 	
 }

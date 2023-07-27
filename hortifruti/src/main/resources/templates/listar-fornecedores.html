@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	
+	<title>Hortifrutigranjeiros - Alimentos saudáveis e frescos</title>
+	<!-- css bootstrap !-->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		
+	<!-- favicon -->
+    <link href="imagens/favicon.ico" rel="icon" type="images/png" />
+    
+</head>
+
+<!-- estilos css -->
+<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+<body>
+
+	<!-- navbar !-->
+	<header th:replace="~{header :: header}"></header>
+
+	<!-- main -->
+	<main>
+		
+		<div class="container mt-100">
+
+				<!-- formulário -->
+				<form class="row g-2 mt-2 mb-2" method="POST">
+					<div class="d-flex justify-content-between">
+						<h2>Lista de Fornecedores</h2>
+						<a class="btn btn-primary btn-sm" href="/cadastrar-fornecedor" type="button">Incluir</a>
+					</div>
+
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">Nome</th>
+									<th scope="col">CPF/CNPJ/MEI</th>
+									<th scope="col">Telefone</th>
+<!--									<th scope="col">CEP</th>-->
+<!--									<th scope="col">Rua</th>-->
+									<th scope="col">Bairro</th>
+									<th scope="col">Cidade</th>
+									<th scope="col">Estado</th>
+<!--									<th scope="col">Número</th>-->
+									<th scope="col">Ações</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr th:each="fornecedor : ${fornecedores}">
+									<td><span th:text="${fornecedor.nome}"></span></td>
+									<td><span th:text="${fornecedor.cpfCnpjMei}"></span></td>
+									<td><span th:text="${fornecedor.telefone}"></span></td>
+<!--									<td><span th:text="${fornecedor.cep}"></span></td>-->
+<!--									<td><span th:text="${fornecedor.rua}"></span></td>-->
+									<td><span th:text="${fornecedor.bairro}"></span></td>
+									<td><span th:text="${fornecedor.cidade}"></span></td>
+									<td><span th:text="${fornecedor.estado}"></span></td>
+<!--									<td><span th:text="${fornecedor.numero}"></span></td>-->
+									<td><a class="btn btn-primary btn-sm">Editar</a>
+										<a class="btn btn-danger btn-sm">Excluir</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</form>
+	</main>
+	
+	<footer th:replace="~{footer :: footer}"></footer>
+
+	<!-- js bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+		
+	<script>
+		document.getElementById('fornecedorLink').classList.add('active');
+	</script>
+	
+</body>
+
+</html>
+

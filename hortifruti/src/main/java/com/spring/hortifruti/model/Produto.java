@@ -25,8 +25,8 @@ public class Produto {
 	private double precoVenda;
 	private Integer quantidade;
 	private byte imagem;
-	private double valorEstoqueMin;
-	private double valorEstoqueMax;
+	private Double qtdEstoqueMin;
+	private Double qtdEstoqueMax;
 
 	public Integer getIdProduto() {
 		return idProduto;
@@ -116,20 +116,20 @@ public class Produto {
 		this.imagem = imagem;
 	}
 
-	public double getValorEstoqueMin() {
-		return valorEstoqueMin;
+	public Double getQtdEstoqueMin() {
+		return qtdEstoqueMin;
 	}
 
-	public void setValorEstoqueMin(double valorEstoqueMin) {
-		this.valorEstoqueMin = valorEstoqueMin;
+	public void setQtdEstoqueMin(Double qtdEstoqueMin) {
+		this.qtdEstoqueMin = qtdEstoqueMin;
 	}
 
-	public double getValorEstoqueMax() {
-		return valorEstoqueMax;
+	public Double getQtdEstoqueMax() {
+		return qtdEstoqueMax;
 	}
 
-	public void setValorEstoqueMax(double valorEstoqueMax) {
-		this.valorEstoqueMax = valorEstoqueMax;
+	public void setQtdEstoqueMax(Double qtdEstoqueMax) {
+		this.qtdEstoqueMax = qtdEstoqueMax;
 	}
 
 }
