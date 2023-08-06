@@ -23,7 +23,7 @@ public class Fornecedor {
 	private String estado;
 	private String numero;
 
-	public Integer getIdProdutor() {
+	public Integer getIdFornecedor() {
 		return IdFornecedor;
 	}
 

@@ -2,23 +2,27 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-	<title>Hortifrutigranjeiros - Alimentos saudáveis e frescos</title>
-	
-	<!-- css bootstrap !-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-		
-	<!-- favicon -->
-    <link href="imagens/favicon.ico" rel="icon" type="images/png" />
-    
+<title>Hortifrutigranjeiros - Alimentos saudáveis e frescos</title>
+
+<!-- css bootstrap !-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+	crossorigin="anonymous">
+
+<!-- favicon -->
+<link href="imagens/favicon.ico" rel="icon" type="images/png" />
+
 </head>
 
-	<!-- estilos css -->
-	<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+<!-- estilos css -->
+<link href="css/estilos.css" rel="stylesheet" type="text/css" />
 
 <body>
 
@@ -30,18 +34,21 @@
 
 		<div class="container mt-100">
 
+			<div class="card m-4">
 				<!-- formulário -->
-				<form class="row g-2 mt-2 mb-2" method="post">
+				<form class="row g-2 m-4" method="post">
 					<h2>Alterar Produto</h2>
 
 					<div class="col-md-4">
-						<label for="inputNome" class="form-label">Nome</label> <input type="text" class="form-control"
-							id="nome" name="nome" required placeholder="Nome..." th:value="${produto.nome}">
+						<label for="inputNome" class="form-label">Nome</label> <input
+							type="text" class="form-control" id="nome" name="nome" required
+							placeholder="Nome..." th:value="${produto.nome}">
 					</div>
-					
+
 					<div class="col-md-4">
 						<label for="selectCategoria" class="form-label">Categoria</label>
-						<select class="form-select" aria-label="categoria" id="categoria" name="categoria" th:value="${produto.categoria}">
+						<select class="form-select" aria-label="categoria" id="categoria"
+							name="categoria" th:value="${produto.categoria}">
 							<option selected></option>
 							<option value="Frutas">Frutas</option>
 							<option value="Folhas">Folhas</option>
@@ -53,23 +60,25 @@
 					</div>
 
 					<div class="col-md-4">
-						<label for="selectUnidadeMedida" class="form-label">Unidade de medida</label>
-						<select class="form-select" aria-label="unidadeMedida" required id="unidadeMedida"
-							name="unidadeMedida">
+						<label for="selectUnidadeMedida" class="form-label">Unidade
+							de medida</label> <select class="form-select" aria-label="unidadeMedida"
+							required id="unidadeMedida" name="unidadeMedida">
 							<option selected></option>
 							<option value="Kilo">Kilo</option>
 							<option value="Unidade">Unidade</option>
 						</select>
 					</div>
-					
+
 					<div class="col-md-4">
-						<label for="inputProdutor" class="form-label">Produtor</label> <input type="text" class="form-control"
-							id="produtor" name="produtor" required placeholder="Produtor..." th:value="${produto.produtor}">
+						<label for="inputFornecedor" class="form-label">Fornecedor</label> <input
+							type="text" class="form-control" id="fornecedor" name="fornecedor"
+							required placeholder="Fornecedor..." th:value="${produto.fornecedor}">
 					</div>
-					
+
 					<div class="col-md-4">
 						<label for="selectArmazenamento" class="form-label">Armazenamento</label>
-						<select class="form-select" aria-label="armazenamento" id="armazenamento" name="armazenamento">
+						<select class="form-select" aria-label="armazenamento"
+							id="armazenamento" name="armazenamento">
 							<option selected></option>
 							<option value="Antecâmara">Antecâmara</option>
 							<option value="Bancada">Bancada</option>
@@ -80,41 +89,47 @@
 					</div>
 
 					<div class="col-md-4">
-						<label for="inputDataValidade" class="form-label">Data validade</label> <input type="date"
-							class="form-control" id="dataValidade" name="dataValidade" required placeholder="DD/MM/AAAA"
-							th:value="${produto.dataValidade}">
+						<label for="inputDataValidade" class="form-label">Data
+							validade</label> <input type="date" class="form-control"
+							id="dataValidade" name="dataValidade" required
+							placeholder="DD/MM/AAAA" th:value="${produto.dataValidade}">
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputPrecoCusto" class="form-label">Preço custo (R$)</label> <input type="number"
-							class="form-control" id="precoCusto" name="precoCusto" required placeholder="999.999,99"
-							th:value="${produto.precoCusto}">
+						<label for="inputPrecoCusto" class="form-label">Preço
+							custo (R$)</label> <input type="number" class="form-control"
+							id="precoCusto" name="precoCusto" required
+							placeholder="999.999,99" th:value="${produto.precoCusto}">
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputPrecoVenda" class="form-label">Preço venda (R$)</label> <input type="number"
-							class="form-control" id="precoVenda" name="precoVenda" required placeholder="999.999,99"
-							th:value="${produto.precoVenda}">
+						<label for="inputPrecoVenda" class="form-label">Preço
+							venda (R$)</label> <input type="number" class="form-control"
+							id="precoVenda" name="precoVenda" required
+							placeholder="999.999,99" th:value="${produto.precoVenda}">
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputQuantidade" class="form-label">Quantidade</label> <input type="number"
-							class="form-control" id="quantidade" name="quantidade" required placeholder="999.999,99"
+						<label for="inputQuantidade" class="form-label">Quantidade</label>
+						<input type="number" class="form-control" id="quantidade"
+							name="quantidade" required placeholder="999.999,99"
 							th:value="${produto.quantidade}">
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputQtdEstoqueMin" class="form-label">Qtd mín estoque</label> <input
-							type="number" class="form-control" id="qtdEstoqueMin" name="qtdEstoqueMin" required
+						<label for="inputQtdEstoqueMin" class="form-label">Qtd mín
+							estoque</label> <input type="number" class="form-control"
+							id="qtdEstoqueMin" name="qtdEstoqueMin" required
 							placeholder="999.999,99" th:value="${produto.qtdEstoqueMin}">
 					</div>
 
 					<div class="col-md-2">
-						<label for="inputQtdEstoqueMax" class="form-label">Qtd máx estoque</label> <input
-							type="number" class="form-control" id="qtdEstoqueMax" name="qtdEstoqueMax" required
+						<label for="inputQtdEstoqueMax" class="form-label">Qtd máx
+							estoque</label> <input type="number" class="form-control"
+							id="qtdEstoqueMax" name="qtdEstoqueMax" required
 							placeholder="999.999,99" th:value="${produto.qtdEstoqueMax}">
 					</div>
-					
+
 
 					<div class="col-md-12 mt-3 mb-3">
 						<input class="btn btn-primary btn-sm" type="submit" value="Salvar">
@@ -123,21 +138,24 @@
 
 				</form>
 			</div>
-			<div class="row mt-2 mb-2">
 		</div>
+		<div class="row mt-2 mb-2"></div>
 	</main>
-	
+
 	<footer th:replace="~{footer :: footer}"></footer>
 
 	<!-- js bootstrap -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
-		
+
 	<script>
 		document.getElementById('produtoLink').classList.add('active');
 	</script>
-	
+
+	<script src="js/formatarMoeda.js"></script>
+
 </body>
 
 </html>

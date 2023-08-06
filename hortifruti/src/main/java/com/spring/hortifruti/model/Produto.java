@@ -20,11 +20,10 @@ public class Produto {
 	private Date dataValidade;
 	private String categoria;
 	private String armazenamento;
-	private String produtor;
+	private String fornecedor;
 	private double precoCusto;
 	private double precoVenda;
 	private Integer quantidade;
-	private byte imagem;
 	private Double qtdEstoqueMin;
 	private Double qtdEstoqueMax;
 
@@ -76,12 +75,12 @@ public class Produto {
 		this.armazenamento = armazenamento;
 	}
 
-	public String getProdutor() {
-		return produtor;
+	public String getFornecedor() {
+		return fornecedor;
 	}
 
-	public void setProdutor(String produtor) {
-		this.produtor = produtor;
+	public void setFornecedor(String fornecedor) {
+		this.fornecedor = fornecedor;
 	}
 
 	public double getPrecoVenda() {
@@ -106,14 +105,6 @@ public class Produto {
 
 	public void setQuantidade(Integer quantidade) {
 		this.quantidade = quantidade;
-	}
-
-	public byte getImagem() {
-		return imagem;
-	}
-
-	public void setImagem(byte imagem) {
-		this.imagem = imagem;
 	}
 
 	public Double getQtdEstoqueMin() {

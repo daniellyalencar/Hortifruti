@@ -49,21 +49,20 @@ public class ProdutoController {
 		Produto produto = pr.findById(idProduto);
 		ModelAndView mv = new ModelAndView("alterar-produto");
 		mv.addObject("produto", produto);
-		
+
 		return mv;
 	}
-	
-	@RequestMapping(value = "alterarProduto/{idProduto}", method = RequestMethod.POST)
+
+	@RequestMapping(value = "alterar-produto/{idProduto}", method = RequestMethod.POST)
 	public String alterarProduto(@Validated Produto produto, BindingResult result, RedirectAttributes attributes) {
 		pr.save(produto);
 		return "redirect:/listar-produtos";
 	}
-	
-	@RequestMapping(value= "excluir-produto")
+
+	@RequestMapping(value = "excluir-produto")
 	public String excluirProduto(Integer idProduto) {
 		pr.deleteById(idProduto);
 		return "redirect:/listar-produtos";
 	}
 
-	
 }
