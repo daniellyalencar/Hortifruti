@@ -46,19 +46,19 @@
 
 					<div class="col-md-4">
 						<label for="inputCpfCnpjMei" class="form-label">CPF/CNPJ/MEI</label>
-						<input type="number" class="form-control" id="cpfCnpjMei"
-							name="cpfCnpjMei" required placeholder="CPF ou CNPJ ou Nr MEI">
+						<input type="text" class="form-control" id="cpfCnpjMei"
+							name="cpfCnpjMei" required placeholder="CPF ou CNPJ ou Nr MEI" maxlength="18" oninput="formatarCpfCnpj(this)">
 					</div>
 
 					<div class="col-md-4">
 						<label for="inputTelefone" class="form-label">Telefone</label> <input
-							type="tel" class="form-control" id="telefone" name="telefone" maxlength="15" pattern="\(\d{2}\)\s*\d{5}-\d{4}"
+							type="tel" class="form-control" id="telefone" name="telefone" maxlength="16" oninput="formatarTelefone(this)"
 							required placeholder="(00) 0 0000-0000">
 					</div>
 
 					<div class="col-md-3">
 						<label for="inputCep" class="form-label">CEP</label> <input
-							type="number" class="form-control" id="cep" name="cep" required
+							type="text" class="form-control" id="cep" name="cep" required maxlength="9" oninput="formatarCep(this)"
 							placeholder="00000-000" onblur="buscarCEP()">
 					</div>
 
@@ -117,6 +117,9 @@
 	</script>
 
 	<script src="js/buscarCep.js"></script>
+	<script src="js/formatarCpfCnpj.js"></script>
+	<script src="js/formatarTelefone.js"></script>
+	<script src="js/formatarCep.js"></script>
 
 </body>
 

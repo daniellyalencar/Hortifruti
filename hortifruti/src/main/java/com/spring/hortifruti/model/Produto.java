@@ -21,11 +21,11 @@ public class Produto {
 	private String categoria;
 	private String armazenamento;
 	private String fornecedor;
-	private double precoCusto;
-	private double precoVenda;
+	private String precoCusto;
+	private String precoVenda;
 	private Integer quantidade;
-	private Double qtdEstoqueMin;
-	private Double qtdEstoqueMax;
+	private Integer qtdEstoqueMin;
+	private Integer qtdEstoqueMax;
 
 	public Integer getIdProduto() {
 		return idProduto;
@@ -83,19 +83,19 @@ public class Produto {
 		this.fornecedor = fornecedor;
 	}
 
-	public double getPrecoVenda() {
+	public String getPrecoVenda() {
 		return precoVenda;
 	}
 
-	public void setPrecoVenda(double precoVenda) {
+	public void setPrecoVenda(String precoVenda) {
 		this.precoVenda = precoVenda;
 	}
 
-	public double getPrecoCusto() {
+	public String getPrecoCusto() {
 		return precoCusto;
 	}
 
-	public void setPrecoCusto(double precoCusto) {
+	public void setPrecoCusto(String precoCusto) {
 		this.precoCusto = precoCusto;
 	}
 
@@ -107,19 +107,19 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 
-	public Double getQtdEstoqueMin() {
+	public Integer getQtdEstoqueMin() {
 		return qtdEstoqueMin;
 	}
 
-	public void setQtdEstoqueMin(Double qtdEstoqueMin) {
+	public void setQtdEstoqueMin(Integer qtdEstoqueMin) {
 		this.qtdEstoqueMin = qtdEstoqueMin;
 	}
 
-	public Double getQtdEstoqueMax() {
+	public Integer getQtdEstoqueMax() {
 		return qtdEstoqueMax;
 	}
 
-	public void setQtdEstoqueMax(Double qtdEstoqueMax) {
+	public void setQtdEstoqueMax(Integer qtdEstoqueMax) {
 		this.qtdEstoqueMax = qtdEstoqueMax;
 	}
 

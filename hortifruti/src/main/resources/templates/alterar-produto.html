@@ -7,7 +7,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<title>Hortifrutigranjeiros - Alimentos saudáveis e frescos</title>
+<title>Hortifruti - Alimentos saudáveis e frescos</title>
 
 <!-- css bootstrap !-->
 <link
@@ -17,12 +17,12 @@
 	crossorigin="anonymous">
 
 <!-- favicon -->
-<link href="imagens/favicon.ico" rel="icon" type="images/png" />
+<link href="/imagens/favicon.ico" rel="icon" type="images/png" />
 
 </head>
 
-<!-- estilos css -->
-<link href="css/estilos.css" rel="stylesheet" type="text/css" />
+	<!-- estilos css -->
+	<link href="/css/estilos.css" rel="stylesheet" type="text/css" />
 
 <body>
 
@@ -49,10 +49,10 @@
 						<label for="selectCategoria" class="form-label">Categoria</label>
 						<select class="form-select" aria-label="categoria" id="categoria"
 							name="categoria" th:value="${produto.categoria}">
-							<option selected></option>
 							<option value="Frutas">Frutas</option>
 							<option value="Folhas">Folhas</option>
 							<option value="Grãos">Grãos</option>
+							<option value="Laticínios">Laticínios</option>
 							<option value="Legumes">Legumes</option>
 							<option value="Padaria">Padaria</option>
 							<option value="Verduras">Verduras</option>
@@ -62,10 +62,10 @@
 					<div class="col-md-4">
 						<label for="selectUnidadeMedida" class="form-label">Unidade
 							de medida</label> <select class="form-select" aria-label="unidadeMedida"
-							required id="unidadeMedida" name="unidadeMedida">
-							<option selected></option>
+							required id="unidadeMedida" name="unidadeMedida" th:value="${produto.unidadeMedida}">
 							<option value="Kilo">Kilo</option>
 							<option value="Unidade">Unidade</option>
+							<option value="Litro">Litro</option>
 						</select>
 					</div>
 
@@ -78,13 +78,13 @@
 					<div class="col-md-4">
 						<label for="selectArmazenamento" class="form-label">Armazenamento</label>
 						<select class="form-select" aria-label="armazenamento"
-							id="armazenamento" name="armazenamento">
-							<option selected></option>
+							id="armazenamento" name="armazenamento" th:value="${produto.armazenamento}">
 							<option value="Antecâmara">Antecâmara</option>
 							<option value="Bancada">Bancada</option>
 							<option value="Câmara fria">Câmara fria</option>
 							<option value="Congelado">Congelado</option>
 							<option value="Depósito">Depósito</option>
+							<option value="Refrigeração 10°C">Refrigeração 10°C</option>
 						</select>
 					</div>
 
@@ -97,22 +97,22 @@
 
 					<div class="col-md-2">
 						<label for="inputPrecoCusto" class="form-label">Preço
-							custo (R$)</label> <input type="number" class="form-control"
+							custo (R$)</label> <input type="text" class="form-control"
 							id="precoCusto" name="precoCusto" required
-							placeholder="999.999,99" th:value="${produto.precoCusto}">
+							placeholder="0,00" minlength="1" maxlength="8" oninput="formatarMoeda(this)" th:value="${produto.precoCusto}">
 					</div>
 
 					<div class="col-md-2">
 						<label for="inputPrecoVenda" class="form-label">Preço
-							venda (R$)</label> <input type="number" class="form-control"
+							venda (R$)</label> <input type="text" class="form-control"
 							id="precoVenda" name="precoVenda" required
-							placeholder="999.999,99" th:value="${produto.precoVenda}">
+							placeholder="0,00" minlength="1" maxlength="8" oninput="formatarMoeda(this)" th:value="${produto.precoVenda}">
 					</div>
 
 					<div class="col-md-2">
 						<label for="inputQuantidade" class="form-label">Quantidade</label>
 						<input type="number" class="form-control" id="quantidade"
-							name="quantidade" required placeholder="999.999,99"
+							name="quantidade" required placeholder="0" minlength="1" maxlength="4"
 							th:value="${produto.quantidade}">
 					</div>
 
@@ -120,14 +120,14 @@
 						<label for="inputQtdEstoqueMin" class="form-label">Qtd mín
 							estoque</label> <input type="number" class="form-control"
 							id="qtdEstoqueMin" name="qtdEstoqueMin" required
-							placeholder="999.999,99" th:value="${produto.qtdEstoqueMin}">
+							placeholder="0" minlength="1" maxlength="4" th:value="${produto.qtdEstoqueMin}">
 					</div>
 
 					<div class="col-md-2">
 						<label for="inputQtdEstoqueMax" class="form-label">Qtd máx
 							estoque</label> <input type="number" class="form-control"
 							id="qtdEstoqueMax" name="qtdEstoqueMax" required
-							placeholder="999.999,99" th:value="${produto.qtdEstoqueMax}">
+							placeholder="0" minlength="1" maxlength="4" th:value="${produto.qtdEstoqueMax}">
 					</div>
 
 
@@ -154,7 +154,7 @@
 		document.getElementById('produtoLink').classList.add('active');
 	</script>
 
-	<script src="js/formatarMoeda.js"></script>
+	<script src="/js/formatarMoeda.js"></script>
 
 </body>
 

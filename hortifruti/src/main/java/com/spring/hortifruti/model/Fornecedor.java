@@ -16,12 +16,17 @@ public class Fornecedor {
 	private String nome;
 	private String cpfCnpjMei;
 	private String telefone;
-	private Integer cep;
+	private String cep;
 	private String rua;
 	private String bairro;
 	private String cidade;
 	private String estado;
 	private String numero;
+	
+	// construtor
+	public Fornecedor() {
+	
+	}
 
 	public Integer getIdFornecedor() {
 		return IdFornecedor;
@@ -55,11 +60,11 @@ public class Fornecedor {
 		this.telefone = telefone;
 	}
 
-	public Integer getCep() {
+	public String getCep() {
 		return cep;
 	}
 
-	public void setCep(Integer cep) {
+	public void setCep(String cep) {
 		this.cep = cep;
 	}
 

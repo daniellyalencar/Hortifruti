@@ -48,7 +48,7 @@ public class FornecedorController {
 		return mv;
 	}
 
-	@RequestMapping(value = "alterar-fornecedor/{idFornecedor}", method = RequestMethod.POST)
+	@RequestMapping(value = "alterarFornecedor/{idFornecedor}", method = RequestMethod.POST)
 	public String alterarFornecedor(@Validated Fornecedor fornecedor, BindingResult result,
 			RedirectAttributes attributes) {
 		fr.save(fornecedor);

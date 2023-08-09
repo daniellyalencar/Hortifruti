@@ -1,19 +1,8 @@
-    function formatarMoeda(valor) {
-        var formatter = new Intl.NumberFormat('pt-BR', {
-            style: 'currency',
-            currency: 'BRL'
-        });
+function formatarMoeda(input) {
+	var value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+	value = (value / 100).toFixed(2) + '';
+	value = value.replace(".", ",");
+	value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 
-        return formatter.format(valor);
-    }
-
-    function removerFormatacaoMoeda(valor) {
-        return parseFloat(valor.replace(',', '.'));
-    }
-    
-    function atualizarCampoMoeda(input) {
-        var valor = input.value.replace(/\D/g, '');
-        input.value = formatarMoeda(valor / 100);
-        input.setAttribute('data-valor', removerFormatacaoMoeda(input.value));
-    }
-
+	input.value = value;
+}
